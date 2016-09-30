@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style type="text/css">
+	.wrapper{
+	height: 800px;
+	width: 100%;
+	background: url(http://img02.deviantart.net/3c96/i/2005/080/f/c/samurai_thing_by_morriperkele.jpg) no-repeat ;
+	background-position: center center;
+	background-attachment: fixed;
+    border: 2px solid ;
+    background-color: black;
+
+	}
+	.transperent{
+	margin: 0px auto;
+	margin-top: 15%;
+	padding:30px;
+	width: 50%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+	}
+	#cntdwn{
+	margin-left: 20%;
+	padding-top: 3%;
+
+
+	}
+</style>
+
+
+
+<script language="JavaScript">
+var millisecs = 60*60*1000
+d = new Date // this new Date has to come from database
+
+function twoHoursLater(d){
+	return new Date(+d + 2*millisecs);
+}
+
+TargetDate = twoHoursLater(d);
+BackColor = "";
+ForeColor = "white";
+CountActive = true;
+CountStepper = -1;
+LeadingZero = true;
+DisplayFormat = "%%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+FinishMessage = "Time's Out!";
+</script>
+<script language="JavaScript" src="countdown.js"></script>
+	<title>Samurai Gold</title>
+</head>
+<body>
+	<!-- <div class='wrapper'> -->
+	<div class='transperent'>
+	<!-- <div class="container"> -->
+	<h2>Hello User!{{session['name']}}</h2>
+
+	<a class="btn btn-default" href="new_game.html" role="button">Start a new game</a> 
+	<a class="btn btn-default" href="/join_game" role="button">Join an existing game</a>
+
+		
+	<!-- </div> -->
+	</div>
+	</div>
+
+
+</body>
+</html>
